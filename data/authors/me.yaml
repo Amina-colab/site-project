@@ -32,6 +32,27 @@ links:
   - icon: brands/github
     url: https://github.com/Amina-colab
     label: GitHub
+  - icon: graduation-cap
+    url: https://elibrary.ru/
+    label: eLibrary
+  - icon: google-scholar
+    url: https://scholar.google.com/
+    label: Google Scholar
+  - icon: orcid
+    url: https://orcid.org/
+    label: ORCID
+  - icon: brands/mendeley
+    url: https://www.mendeley.com/
+    label: Mendeley
+  - icon: researchgate
+    url: https://www.researchgate.net/
+    label: ResearchGate
+  - icon: academia
+    url: https://www.academia.edu/
+    label: Academia.edu
+  - icon: arxiv
+    url: https://arxiv.org/
+    label: arXiv
 
 interests:
   - Веб-разработка
