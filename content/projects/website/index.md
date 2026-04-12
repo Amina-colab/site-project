@@ -1,34 +1,14 @@
 ---
 title: "Сайт для ресторана восточной кухни"
 date: 2026-04-15
-summary: "Современный адаптивный веб-сайт для ресторана с меню, онлайн-бронированием и галереей блюд"
+links:
+  - type: site
+    url: https://amina-colab.github.io/eastern-restaurant/
 tags:
   - веб-разработка
   - HTML/CSS
   - JavaScript
   - адаптивный дизайн
-categories:
-  - Проекты
-external_link: ""
-draft: false
-authors:
-  - admin
-
-# Изображение для превью (положите файл featured.jpg в ту же папку)
-image:
-  filename: featured.png
-  preview_only: false
-
-# Ссылки на ресурсы
-links:
-  - icon: github
-    icon_pack: fab
-    name: Исходный код
-    url: https://github.com/Amina-colab/eastern-restaurant
-  - icon: external-link-alt
-    icon_pack: fas
-    name: Демо
-    url: https://amina-colab.github.io/eastern-restaurant/
 ---
 
 ## О проекте
