@@ -1,120 +1,109 @@
 ---
-title: "Управление версиями с Git"
+title: "Version Control with Git"
 date: 2026-03-20
 draft: false
 authors:
   - me
 tags:
   - git
-  - контроль версий
-  - обучение
+  - version control
+  - learning
 categories:
-  - Технологии
-summary: "Основы работы с Git для начинающих"
+  - Technology
+summary: "Git basics for beginners"
 
 featured: true
 ---
 
-## Что такое Git и зачем он нужен?
+## What is Git and why do you need it?
 
-**Git** — это распределенная система контроля версий. Если говорить проще, это программа, которая следит за изменениями в ваших файлах. Она позволяет «фотографировать» состояние проекта в разные моменты времени и легко перемещаться между этими снимками.
+**Git** is a distributed version control system. Simply put, it's a program that tracks changes in your files. It allows you to take "snapshots" of your project at different points in time and easily move between these snapshots.
 
-## Ключевые преимущества Git:
+## Key advantages of Git:
 
-- История изменений: Вы всегда знаете, кто, когда и зачем изменил ту или иную строчку кода.
+- **Change history**: You always know who, when, and why changed a particular line of code.
 
-- Безопасность: Все версии проекта хранятся локально у каждого разработчика, а также (опционально) на удаленном сервере. Потеря данных практически исключена.
+- **Safety**: All versions of the project are stored locally on each developer's machine, as well as (optionally) on a remote server. Data loss is practically impossible.
 
-- Ветвление (Branches): Возможность работать над новыми функциями изолированно, не мешая стабильной версии продукта.
+- **Branching**: The ability to work on new features in isolation without disrupting the stable version of the product.
 
-- Командная работа: Несколько человек могут одновременно работать над одним проектом, не затирая изменения друг друга.
+- **Teamwork**: Multiple people can work on the same project simultaneously without overwriting each other's changes.
 
-## Основные понятия
+## Basic concepts
 
-Прежде чем вводить команды, важно понять три уровня хранения информации в Git:
+Before entering commands, it's important to understand the three levels of information storage in Git:
 
-1. Рабочая директория (Working Directory): Это ваша текущая папка с файлами, где вы пишете код.
+1. **Working Directory**: This is your current folder with files where you write code.
 
-2. Индекс (Staging Area): Промежуточная зона. Здесь вы собираете изменения, которые хотите сохранить. Это как подготовка посылки перед отправкой.
+2. **Staging Area**: An intermediate zone. Here you gather the changes you want to save. It's like preparing a package before sending it.
 
-3. Репозиторий (Repository): Место, где Git хранит все зафиксированные версии (коммиты) навсегда.
+3. **Repository**: The place where Git permanently stores all committed versions (commits).
 
-## Первые шаги: базовый цикл работы
+## First steps: Basic workflow
 
-Предположим, вы только начали проект или присоединились к существующему. Вот основные команды, которые составляют 80% повседневной работы.
+Suppose you've just started a project or joined an existing one. Here are the main commands that make up 80% of daily work.
 
-1. Инициализация или клонирование
-Если вы начинаете проект с нуля, создайте папку и выполните:
+### 1. Initialization or cloning
+
+If you're starting a project from scratch, create a folder and run:
 
 ```bash
 git init
 ```
-Если вы хотите скачать уже существующий проект с сервера (например, с GitHub):
+### 2. If you want to download an existing project from a server (for example, from GitHub):
 
 ```bash
-git clone <ссылка_на_репозиторий>
+git clone <repository_url>
 ```
-2. Статус и отслеживание изменений
-Чтобы понять, какие файлы были изменены, а какие готовы к сохранению, используйте:
+### 3. Adding to the staging area
+
+To tell Git, "These changes need to be saved," use the `add` command. You can add specific files or everything at once:
 
 ```bash
-git status
+git add index.html    # add one file
+git add .             # add all changed files in the folder
 ```
-3. Добавление в индекс (Staging)
-Чтобы сказать Git: «Эти изменения нужно сохранить», используйте команду add. Можно добавлять конкретные файлы или всё подряд:
+### 4. Commit
+A commit is the "snapshot" of the project. It is important to accompany each commit with a meaningful message about what was done:
+
+```bash
+git commit -m "Added login form and fixed styles"
 ```
-bash
-git add index.html    # добавить один файл
-git add .             # добавить все измененные файлы в папке
+### 5. Branching
+
+Branches are "isolated spaces." The main branch is traditionally called `main` or `master`. To create a new branch for a new feature:
+
+```bash
+git branch feature/new-login   # create a branch
+git checkout feature/new-login # switch to it
 ```
+### 6. Synchronizing with a remote repository
+If you are working in a team, you will need to send your commits to the server (push) and fetch others' changes (pull).
 
-4. Фиксация (Commit)
-Коммит — это и есть та самая «фотография» проекта. Важно сопровождать коммит осмысленным сообщением о том, что было сделано.
+```bash
+git pull       # fetch fresh changes from the server
+git push       # send your commits to the server
 ```
-bash
-git commit -m "Добавил форму авторизации и исправил стили"
-```
-5. Ветвление (Branching)
-Ветки — это «изолированные пространства». Главная ветка традиционно называется main или master. Чтобы создать новую ветку для новой функции:
-```
-bash
-git branch feature/new-login   # создать ветку
-git checkout feature/new-login # переключиться на нее
-```
-Современный способ сделать то же самое одной командой:
-```
-bash
-git checkout -b feature/new-login
-```
-6. Синхронизация с удаленным репозиторием
-Если вы работаете в команде, вам понадобится отправлять свои коммиты на сервер (push) и забирать чужие (pull).
-```
-bash
-git pull       # забрать свежие изменения с сервера
-git push       # отправить свои коммиты на сервер
-```
-## Золотые правила работы с Git
+## Golden rules of working with Git
 
-Чтобы использование Git приносило пользу, следуйте нескольким простым правилам:
+To make using Git beneficial, follow a few simple rules:
 
-- **Частые коммиты**: Лучше сделать 10 маленьких коммитов с понятными сообщениями, чем один гигантский с сообщением «фикс всего».
+- **Commit often**: It is better to make 10 small commits with clear messages than one giant commit with the message "fixed everything".
 
-- **Понятные сообщения**: Сообщение коммита должно отвечать на вопрос «Зачем?». Например: «Исправил баг №42: падение приложения при пустом поисковом запросе».
+- **Write clear messages**: A commit message should answer the question "Why?". For example: "Fixed bug #42: app crashes on empty search query".
 
-- **Не коммитьте сгенерированные файлы**: Папки вроде node_modules, бинарные файлы или кэш стоит добавить в файл .gitignore, чтобы не захламлять репозиторий.
+- **Do not commit generated files**: Folders like `node_modules`, binary files, or cache should be added to a `.gitignore` file to avoid cluttering the repository.
 
-- **Работайте в ветках**: Никогда не делайте изменения прямо в ветке main (или master), особенно если проект коллективный. Используйте feature-ветки и затем сливайте их через Pull Request (Merge Request).
+- **Work with branches**: Never make changes directly to the `main` (or `master`) branch, especially on a team project. Use feature branches and then merge them via a Pull Request (or Merge Request).
 
-## Популярные сервисы хостинга
-Git — это технология, но чтобы удобно обмениваться кодом с коллегами, используют веб-платформы:
+## Popular hosting services
 
-- GitHub: Крупнейшая социальная сеть для разработчиков.
+Git is a technology, but to conveniently share code with colleagues, people use web platforms:
 
-- GitLab: Популярна для корпоративной разработки, позволяет разворачивать свой собственный сервер.
+- **GitHub**: The largest social network for developers.
+- **GitLab**: Popular for corporate development, allows you to run your own server.
+- **Bitbucket**: Often used in companies integrated with the Atlassian ecosystem.
 
-- Bitbucket: Часто используется в компаниях, интегрированных с экосистемой Atlassian.
+## Conclusion
 
-## Заключение
-
-Git — это must-have инструмент для любого разработчика. Не бойтесь ошибаться, практикуйтесь каждый день, и через неделю вы будете чувствовать себя уверенно!
-text
+Git is a must-have tool for any developer. Do not be afraid to make mistakes, practice every day, and within a week you will feel confident!

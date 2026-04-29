@@ -1,69 +1,69 @@
 ---
-title: "Работа с библиографией"
+title: "Working with Bibliographies"
 date: 2026-04-04
 draft: false
 authors:
   - admin
 tags:
   - markdown
-  - языки разметки
-  - обучение
+  - markup languages
+  - learning
 categories:
-  - Технологии
-summary: "Работа с библиографией"
+  - Technology
+summary: "Working with bibliographies"
 
 featured: true
 ---
 
-## Зачем нужна библиография?
+## Why is a bibliography needed?
 
-Библиография — это не просто «список литературы» в конце работы. Она выполняет несколько важных функций:
+A bibliography is not just a "list of references" at the end of a paper. It serves several important functions:
 
-- **Доказывает вашу компетентность** — вы показываете, что изучили тему.
-- **Помогает читателю** — он может найти и проверить ваши источники.
-- **Защищает от обвинений в плагиате** — вы честно указываете, чьими идеями пользуетесь.
+- **Proves your competence** — you show that you have studied the topic.
+- **Helps the reader** — they can find and verify your sources.
+- **Protects against accusations of plagiarism** — you honestly indicate whose ideas you are using.
 
-## Основные правила (кратко)
+## Basic rules (briefly)
 
-1. Оформляйте все источники **единообразно** (по ГОСТ, APA или другому стилю).
-2. Включайте **все использованные** источники — и цитируемые, и просто упомянутые.
-3. Проверяйте **точность** выходных данных (год, издательство, страницы).
-4. Используйте **автоматические инструменты**, но всегда перепроверяйте результат.
+1. Format all sources **consistently** (according to GOST, APA, or another style).
+2. Include **all sources used** — both those cited and those merely mentioned.
+3. Verify the **accuracy** of bibliographic data (year, publisher, pages).
+4. Use **automated tools**, but always double-check the result.
 
-## Форматы библиографических записей
+## Bibliography entry formats
 
-В зависимости от стиля, запись может выглядеть по-разному. Пример для **книги**:
+Depending on the style, an entry may look different. Example for a **book**:
 
-- **ГОСТ** (Россия):  
-  `Иванов И. И. Название книги. — М.: Издательство, 2023. — 250 с.`
-- **APA** (международный):  
+- **GOST** (Russia):  
+  `Ivanov I. I. Title of the book. — M.: Publisher, 2023. — 250 p.`
+- **APA** (international):  
   `Ivanov, I. I. (2023). Title of the book. Publisher.`
 
-Для **статьи из журнала** (ГОСТ):  
-`Петров П. П. Название статьи // Журнал. — 2024. — Т. 10, № 2. — С. 45–52.`
+For a **journal article** (GOST):  
+`Petrov P. P. Title of the article // Journal. — 2024. — Vol. 10, No. 2. — P. 45–52.`
 
-## Инструменты для работы с библиографией
+## Tools for working with bibliographies
 
-### 1. Zotero (бесплатно)
+### 1. Zotero (free)
 
-- Плагин для браузера — сохраняет источники одним кликом.
-- Синхронизация между устройствами.
-- Экспорт в BibTeX, Word, Google Docs.
+- Browser plugin — saves sources with one click.
+- Synchronization between devices.
+- Export to BibTeX, Word, Google Docs.
 
-### 2. Mendeley (бесплатно, от Elsevier)
+### 2. Mendeley (free, from Elsevier)
 
-- Хорош для работы с PDF.
-- Социальная сеть для исследователей.
+- Good for working with PDFs.
+- Social network for researchers.
 
-### 3. BibTeX / BibLaTeX (для LaTeX)
+### 3. BibTeX / BibLaTeX (for LaTeX)
 
-Файл `.bib` хранит все источники в структурированном виде. Пример:
+A `.bib` file stores all sources in a structured format. Example:
 
 ```bibtex
 @article{petrov2024,
-  author  = {Петров, П. П.},
-  title   = {Название статьи},
-  journal = {Журнал},
+  author  = {Petrov, P. P.},
+  title   = {Title of the article},
+  journal = {Journal},
   year    = {2024},
   volume  = {10},
   number  = {2},

@@ -1,46 +1,48 @@
 ---
-title: "Моя вторая неделя в мире IT"
+title: "My Second Week in the World of IT"
 date: 2026-04-04
 draft: false
 authors:
   - admin
 tags:
-  - личное
-  - учеба
-  - РУДН
+  - personal
+  - study
+  - RUDN
 categories:
-  - Блог
-summary: "Как прошла моя вторая неделя изучения компьютерных наук в РУДН"
+  - Blog
+summary: "How my second week of studying Computer Science at RUDN went"
 
 featured: true
 ---
 
-## Итоги недели
+## Week Summary
 
-На этой неделе я:
+This week I:
 
-+ На этой неделе я наконец-то по-настоящему познакомилась с классами в C++. До этого они казались чем-то магическим, а теперь вижу в них удобный способ собирать данные и функции вместе. Разобралась, чем struct отличается от class (по умолчанию всё приватное — запомнила после пары ошибок в коде).
++ Finally got to properly learn classes in C++. Before, they seemed like something magical, but now I see them as a convenient way to bundle data and functions together. I figured out the difference between struct and class (everything is private by default — I remembered that after a couple of errors in my code).
 
-+ Ещё одно открытие — статические переменные-члены. Оказывается, они общие для всех объектов класса, а не копируются для каждого. Я написала небольшой счётчик объектов, и он работал именно так, как я ожидала — было приятное чувство «ага, работает!».
++ Another discovery — static member variables. Turns out they are shared across all objects of a class, rather than being copied for each one. I wrote a small object counter, and it worked exactly as I expected — it gave me that satisfying "aha, it works!" feeling.
 
-+ Отдельный вызов — указатели и ссылки. Долго путала * и &, но на этой неделе наступило понимание: указатель — это переменная, которая хранит адрес, а ссылка — это псевдоним (и её нельзя переназначить). Писала небольшие функции обмена значений — сначала с указателями, потом со ссылками. Результат одинаковый, но ссылки читаются легче.
++ A special challenge — pointers and references. I kept confusing * and & for a long time, but this week things started to click: a pointer is a variable that stores an address, and a reference is an alias (and you can't reassign it). I wrote small value-swapping functions — first with pointers, then with references. The result is the same, but references are easier to read.
 
-## Впечатления
-Честно? Было и трудно, и очень интересно. Когда я впервые написала класс Student с полями и методом printInfo(), а потом создала несколько объектов — почувствовала себя настоящим разработчиком. Статические переменные сначала удивили: «Как это одна переменная на все объекты?» — но когда добавила статический счётчик и увидела, как он растёт с каждым новым объектом, пришло понимание.
+## Impressions
 
-С указателями и ссылками было больше всего ошибок. Несколько раз ловила себя на том, что пытаюсь разыменовать nullptr (спасибо, что программа просто падала, а не портила данные). Но когда разобралась с передачей по ссылке в функции — стало гораздо понятнее, как работает cin >> x и почему x меняется.
+Honestly? It was both difficult and very interesting. When I first wrote a Student class with fields and a printInfo() method, then created several objects — I felt like a real developer. Static variables surprised me at first: "How can one variable be shared across all objects?" — but when I added a static counter and saw it increase with each new object, understanding dawned.
 
-Особенно радует, что на лабораторных работах в РУДН преподаватели объясняют не только «как», но и «зачем». Теперь я понимаю, зачем нужны ссылки в операторах ввода/вывода и почему в конструкторе копирования лучше использовать ссылку.
+Pointers and references caused the most errors. Several times I caught myself trying to dereference nullptr (thankfully the program just crashed instead of corrupting data). But once I figured out passing by reference in functions, it became much clearer how cin >> x works and why x changes.
 
-## Планы на следующую неделю
-- Разобраться с конструкторами и деструкторами — пока только на уровне «они вызываются автоматически», хочу написать свой класс с нетривиальным деструктором.
+What I especially appreciate is that during lab sessions at RUDN, the professors explain not only the "how" but also the "why." Now I understand why references are needed in input/output operators and why it's better to use a reference in a copy constructor.
 
-- Попрактиковаться в передаче указателей в функции (особенно с динамической памятью, new и delete).
+## Plans for Next Week
 
-- Решить несколько задач на массивы указателей и, возможно, начать изучать динамические массивы объектов.
+- Understand constructors and destructors — so far only at the "they are called automatically" level. I want to write my own class with a non-trivial destructor.
 
-- Закрепить статические методы (пока только переменные освоила).
+- Practice passing pointers to functions (especially with dynamic memory, new and delete).
 
-И главное — не бояться ошибок компиляции, а читать их как подсказки.
+- Solve several problems with arrays of pointers and possibly start studying dynamic arrays of objects.
 
-До встречи через неделю!
+- Solidify static methods (so far I've only mastered static variables).
+
+And most importantly — don't be afraid of compilation errors, but read them as hints.
+
+See you next week!

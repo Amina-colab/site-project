@@ -1,99 +1,97 @@
 ---
-title: "Язык разметки Markdown"
+title: "Markdown Markup Language"
 date: 2026-04-04
 draft: false
 authors:
   - admin
 tags:
   - markdown
-  - языки разметки
-  - обучение
+  - markup languages
+  - learning
 categories:
-  - Технологии
-summary: "Основы работы с Markdown для начинающих"
+  - Technology
+summary: "Markdown basics for beginners"
 
 featured: true
 ---
 
-## Что такое язык разметки?
+## What is a markup language?
 
-Язык разметки (Markup Language) — это система условных обозначений, которая используется для форматирования текста. Markdown — самый популярный и простой язык разметки, который превращает обычный текст в красиво оформленный документ.
+A markup language is a system of annotations used to format text. Markdown is the most popular and simplest markup language that turns plain text into a beautifully formatted document.
 
-## Зачем нужен Markdown?
+## Why do you need Markdown?
 
-- Простота — пишется обычным текстом, легко читается
-- Универсальность — поддерживается везде: GitHub, блоги, заметки
-- Быстрота — не нужно отвлекаться на кнопки форматирования
-- Конвертация — легко превращается в HTML, PDF, Word
-- Чистота — текст остается чистым и понятным даже без отображения
+- **Simplicity** — written in plain text, easy to read
+- **Versatility** — supported everywhere: GitHub, blogs, notes
+- **Speed** — no need to get distracted by formatting buttons
+- **Conversion** — easily converts to HTML, PDF, Word
+- **Cleanliness** — text remains clean and understandable even without rendering
 
-## Основной синтаксис Markdown
+## Basic Markdown syntax
 
-### Заголовки
+### Headings
 
-# Заголовок 1 уровня
-## Заголовок 2 уровня
-### Заголовок 3 уровня
-#### Заголовок 4 уровня
+```markdown
+# Level 1 Heading
+## Level 2 Heading
+### Level 3 Heading
+#### Level 4 Heading
+Text formatting
+*italic* or _italic_
+**bold** or __bold__
+***bold italic***
+~~strikethrough~~
+Lists
+Numbered list:
 
-### Выделение текста
-
-*курсив* или _курсив_
-**жирный** или __жирный__
-***жирный курсив***
-~~зачеркнутый~~
-
-### Списки
-
-Нумерованный список:
-1. Первый пункт
-2. Второй пункт
-3. Третий пункт
-
-Маркированный список:
-- Пункт 1
-- Пункт 2
-  - Вложенный пункт
-- Пункт 3
-
-### Ссылки и изображения
-
-[Текст ссылки](https://example.com)
-![Альтернативный текст](image.jpg)
-
-### Цитаты и код
-
-> Это цитата
-> Можно на несколько строк
-
-`строчный код`
-
-блок кода на несколько строк
-
-### Таблицы
-
-| Заголовок 1 | Заголовок 2 |
-|-------------|-------------|
-| Ячейка 1    | Ячейка 2    |
-| Ячейка 3    | Ячейка 4    |
-
-## Где используется Markdown?
-
-- GitHub — README.md, Issues, Pull Requests
-- Блоги — Hugo, Jekyll, WordPress
-- Заметки — Obsidian, Notion, Typora
-- Документация — техническая документация
-- Форумы — Reddit, Stack Overflow
-- Мессенджеры — Telegram, Discord
-
-## Полезные ресурсы для изучения
-
-- Markdown Guide — полное руководство
-- GitHub Flavored Markdown — расширенный Markdown от GitHub
-- Markdown Live Preview — онлайн-редактор
-
-## Заключение
-
-Markdown — это язык, который стоит освоить каждому, кто работает с текстом. Он простой, быстрый и везде поддерживается. Попробуйте написать свой первый документ в Markdown уже сегодня!
+1. First item
+2. Second item
+3. Third item
+Bulleted list:
 
 
+- Item 1
+- Item 2
+  - Nested item
+- Item 3
+Links and images
+
+[Link text](https://example.com)
+![Alt text](image.jpg)
+Quotes and code
+
+> This is a quote
+> Can span multiple lines
+inline code
+```
+text
+code block spanning multiple lines
+Tables
+
+| Header 1 | Header 2 |
+|----------|----------|
+| Cell 1   | Cell 2   |
+| Cell 3   | Cell 4   |
+
+Where is Markdown used?
+GitHub — README.md, Issues, Pull Requests
+
+Blogs — Hugo, Jekyll, WordPress
+
+Notes — Obsidian, Notion, Typora
+
+Documentation — technical documentation
+
+Forums — Reddit, Stack Overflow
+
+Messengers — Telegram, Discord
+
+Useful resources for learning
+Markdown Guide — complete guide
+
+GitHub Flavored Markdown — extended Markdown from GitHub
+
+Markdown Live Preview — online editor
+
+## Conclusion
+Markdown is a language worth learning for anyone who works with text. It is simple, fast, and supported everywhere. Try writing your first document in Markdown today!

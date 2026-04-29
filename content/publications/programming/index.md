@@ -1,78 +1,78 @@
 ---
-title: "Языки научного программирования"
+title: "Scientific Programming Languages"
 date: 2026-04-09
 draft: false
 authors:
   - admin
 tags:
-  - язык 
-  - программирование
-  - обучение
+  - language
+  - programming
+  - learning
 categories:
-  - Технологии
-summary: "Языки научного программирования"
+  - Technology
+summary: "Scientific programming languages"
 
 featured: true
 ---
 
-## Введение: чем научное программирование отличается от обычного?
+## Introduction: How is scientific programming different from regular programming?
 
-Когда говорят «программирование», чаще всего представляют веб-сайты, мобильные приложения или игры. Научное программирование — другая вселенная. Здесь код решает уравнения, обрабатывает многомерные массивы, визуализирует данные, обучает нейронные сети и управляет лабораторным оборудованием.
+When people say "programming," they most often imagine websites, mobile applications, or games. Scientific programming is a different universe. Here, code solves equations, processes multidimensional arrays, visualizes data, trains neural networks, and controls laboratory equipment.
 
-Ключевые особенности научного программирования:
+Key features of scientific programming:
 
-- **Точность** — ошибка округления может стоить миллионов (в физике, финансах).
-- **Производительность** — расчёт погоды на сутки вперёд требует петафлопс.
-- **Библиотеки** — никто не пишет метод конечных элементов с нуля.
-- **Воспроизводимость** — научный код должен давать тот же результат при повторном запуске.
+- **Precision** — a rounding error can cost millions (in physics, finance).
+- **Performance** — calculating the weather a day ahead requires petaflops.
+- **Libraries** — no one writes the finite element method from scratch.
+- **Reproducibility** — scientific code must produce the same result when run again.
 
-Какой же язык выбрать студенту, который готовится к карьере в data science, вычислительной физике, биоинформатике или инженерии? Рассмотрим всех кандидатов подробно.
+Which language should a student choose who is preparing for a career in data science, computational physics, bioinformatics, or engineering? Let's look at all the candidates in detail.
 
+## 1. Python — the universal soldier of science
 
-## 1. Python — универсальный солдат науки
+### Why has Python become the standard?
 
-### Почему Python стал стандартом?
+Python is not just a language, it's an ecosystem. Thanks to the SciPy (Scientific Python) project, we have:
 
-Python — это не просто язык, это экосистема. Благодаря проекту SciPy (Scientific Python) мы имеем:
+- **NumPy** — fast arrays and linear algebra (under the hood — C and Fortran)
+- **SciPy** — integrals, optimization, wavelets, signals
+- **Matplotlib** — any graphics: from histograms to 3D surfaces
+- **Pandas** — working with tabular data (like Excel on steroids)
+- **Scikit-learn** — classical machine learning algorithms
+- **TensorFlow / PyTorch** — deep learning (use C++/CUDA kernels, but the interface is Python)
 
-- **NumPy** — быстрые массивы и линейная алгебра (под капотом — C и Fortran).
-- **SciPy** — интегралы, оптимизация, вейвлеты, сигналы.
-- **Matplotlib** — любая графика: от гистограмм до 3D-поверхностей.
-- **Pandas** — работа с табличными данными (как Excel на стероидах).
-- **Scikit-learn** — классические алгоритмы машинного обучения.
-- **TensorFlow / PyTorch** — глубокое обучение (используют C++/CUDA ядра, но интерфейс на Python).
+### Pros in detail:
 
-### Плюсы подробно:
+1. **Ease of learning** — syntax reads like pseudocode.  
+   This allows a scientist (not a programmer) to quickly implement an algorithm.
 
-1. **Простота обучения** — синтаксис читается как псевдокод.  
-   Это позволяет учёному (не программисту) быстро реализовать алгоритм.
+2. **Interactive development** — Jupyter Notebook has become the de facto standard.  
+   You write code, see the graph right away, add LaTeX formulas — you get self-documenting research.
 
-2. **Интерактивная разработка** — Jupyter Notebook стал стандартом де-факто.  
-   Вы пишете код, видите график тут же, добавляете формулы LaTeX — получается самодокументируемое исследование.
+3. **Huge community** — any question has already been asked on Stack Overflow or GitHub discussions.
 
-3. **Огромное сообщество** — любой вопрос уже задан на Stack Overflow или в обсуждениях GitHub.
+4. **Free and cross-platform** — works on Windows, Linux, Mac, even on Raspberry Pi.
 
-4. **Бесплатно и кроссплатформенно** — работает на Windows, Linux, Mac, даже на Raspberry Pi.
+### Cons that no one talks about:
 
-### Минусы, о которых молчат:
+- **Speed** — pure Python is slow. For loops over a million elements, it loses to C++ by 50–100 times.  
+  *Solution:* use NumPy (vectorization) or compilers (Numba, Cython).
 
-- **Скорость** — чистый Python медленный. Для циклов по миллиону элементов он проигрывает C++ в 50–100 раз.  
-  *Решение:* использовать NumPy (векторизация) или компиляторы (Numba, Cython).
+- **Memory consumption** — even a small integer in Python is an object with a header (~28 bytes). For large arrays, use NumPy, where data is stored densely.
 
-- **Потребление памяти** — даже малое целое число в Python — это объект с заголовком (~28 байт). Для больших массивов используют NumPy, где данные хранятся в плотном виде.
+- **Global Interpreter Lock (GIL)** — multithreading does not provide gains on CPU-bound tasks. For parallel calculations, you have to use multiprocessing or external libraries.
 
-- **Глобальная блокировка интерпретатора (GIL)** — многопоточность не даёт прироста на CPU-задачах. Для параллельных расчётов приходится использовать multiprocessing или внешние библиотеки.
-
-### Пример: решение системы линейных уравнений
+### Example: Solving a system of linear equations
 
 ```python
 import numpy as np
 from scipy.linalg import solve
 
-# Создаём матрицу 1000x1000 и правую часть
+# Create a 1000x1000 matrix and right-hand side
 A = np.random.rand(1000, 1000)
 b = np.random.rand(1000)
 
-# Решаем Ax = b (под капотом LAPACK)
+# Solve Ax = b (under the hood — LAPACK)
 x = solve(A, b)
-print(x[:5])  # первые пять компонент
+print(x[:5])  # first five components
+```

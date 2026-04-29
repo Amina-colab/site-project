@@ -1,60 +1,59 @@
 ---
-title: "Моя третья неделя в мире IT"
+title: "My Third Week in the World of IT"
 date: 2026-04-04
 draft: false
 authors:
   - admin
 tags:
-  - личное
-  - учеба
-  - РУДН
+  - personal
+  - study
+  - RUDN
 categories:
-  - Блог
-summary: "Как прошла моя третья неделя изучения компьютерных наук в РУДН"
+  - Blog
+summary: "How my third week of studying Computer Science at RUDN went"
 
 featured: true
 ---
 
-## Итоги недели
+## Week Summary
 
-Эта неделя была посвящена **объектно-ориентированному программированию** на C++. Главный герой — **класс**. Если раньше я писала только функции и структуры, то теперь научилась создавать собственные типы данных, объединяющие данные и методы работы с ними.
+This week was dedicated to **Object-Oriented Programming** in C++. The main character — the **class**. Before, I only wrote functions and structures, but now I've learned how to create my own data types that combine data and methods to work with them.
 
+I figured out:
 
-Я разобралась:
+- how to declare a class (`class`), how it differs from `struct` (everything is `private` by default);
+- what a **constructor** is (called when an object is created) and a **destructor** (called when an object is destroyed);
+- why **class methods** (member functions) are needed;
+- what **encapsulation** is — hiding internal details using `private` and providing access through `public`.
 
-- как объявить класс (`class`), чем он отличается от `struct` (по умолчанию всё `private`);
-- что такое **конструктор** (вызывается при создании объекта) и **деструктор** (вызывается при уничтожении);
-- зачем нужны **методы класса** (функции-члены);
-- что такое **инкапсуляция** — скрытие внутренних деталей с помощью `private` и доступ через `public`.
+I also learned about the **copy constructor** and **assignment operator** — so far at the level of "they exist and can be overridden."
 
-Также я узнала про **конструктор копирования** и **оператор присваивания** — пока на уровне «они есть, и их можно переопределять».
+## Practice
 
-## Практика
+I wrote a `Student` class that stores a name, age, and an array of grades. I added:
 
-Написала класс `Student`, который хранит имя, возраст и массив оценок. Добавила:
+- a constructor with parameters;
+- a `printInfo()` method;
+- an `addGrade()` method;
+- a destructor that outputs a message when an object is deleted (very useful for debugging).
 
-- конструктор с параметрами;
-- метод `printInfo()`;
-- метод `addGrade()`;
-- деструктор, который выводит сообщение об удалении объекта (очень полезно для отладки).
+Then I created several objects, put them into a vector, and sorted them by age. Everything worked — it was an amazing feeling!
 
-Потом создала несколько объектов, положила их в вектор и отсортировала по возрасту. Всё заработало — это было потрясающее чувство!
+We also covered **static fields** — a counter of created objects. I confirmed that it's shared across all instances.
 
-Ещё мы разбирали **статическое поле** — счётчик созданных объектов. Убедилась, что он один на все экземпляры.
+## Impressions
 
-## Впечатления
+At first, classes seemed like magic. Why do we need this if we have structures? But when I wrote my own small hierarchy `Shape` → `Circle`, `Rectangle` and overrode virtual methods, it clicked: OOP allows you to write **flexible and reusable code**.
 
-Сначала классы казались магией. Зачем всё это, если есть структуры? Но когда я написала свою небольшую иерархию `Shape` → `Circle`, `Rectangle` и переопределила виртуальные методы, до меня дошло: ООП позволяет писать **гибкий и переиспользуемый код**.
+The hardest part was understanding where to put `&` and where to put `*` so as not to lose the object. But by the end of the week, I was calmly passing objects by reference to methods.
 
-Самым трудным было понять, где ставить `&`, а где `*`, чтобы не потерять объект. Но к концу недели уже спокойно передаю объекты по ссылке в методы.
+I'm very happy that at RUDN, the lab sessions are structured like this: theory first, then immediately a practical task. The teacher explains not only the syntax but also why it's needed in real projects.
 
-Очень радует, что в РУДН лабораторные построены так: сначала теория, потом сразу практическое задание. Преподаватель объясняет не только синтаксис, но и зачем это нужно в реальных проектах.
+## Plans for Next Week
 
-## Планы на следующую неделю
+- Master **inheritance** (so far I only know the basics) and **polymorphism**.
+- Understand **virtual functions** and **abstract classes**.
+- Write a small project — for example, a library management system or an animal catalog.
+- Solidify working with **dynamic memory** inside classes (copy constructor, destructor, assignment operator — the rule of three).
 
-- Освоить **наследование** (пока знаю только базу) и **полиморфизм**.
-- Разобраться с **виртуальными функциями** и **абстрактными классами**.
-- Написать небольшой проект — например, систему управления библиотекой или каталог животных.
-- Закрепить работу с **динамической памятью** внутри классов (конструктор копирования, деструктор, оператор присваивания — правило трёх).
-
-До встречи через неделю!
+See you next week!
